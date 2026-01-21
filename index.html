@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bellini al Corso – Menu</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family: "Playfair Display", Georgia, serif;
+background:#0c0c0c;
+color:#f5f5f5;
+}
+header{
+text-align:center;
+padding:40px 20px;
+border-bottom:1px solid #c9a24d;
+}
+header img{
+max-width:180px;
+margin-bottom:15px;
+}
+header h1{
+margin:0;
+color:#c9a24d;
+letter-spacing:3px;
+}
+header p{
+margin-top:8px;
+letter-spacing:2px;
+font-size:14px;
+color:#ccc;
+}
+nav{
+display:flex;
+overflow-x:auto;
+gap:10px;
+padding:15px;
+background:#111;
+}
+nav button{
+flex:0 0 auto;
+background:#000;
+border:1px solid #c9a24d;
+color:#c9a24d;
+padding:10px 18px;
+border-radius:25px;
+white-space:nowrap;
+font-size:14px;
+}
+section{
+display:none;
+padding:25px 20px;
+}
+section.active{
+display:block;
+}
+h2{
+text-align:center;
+color:#c9a24d;
+letter-spacing:2px;
+border-bottom:1px solid #333;
+padding-bottom:10px;
+}
+ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+li{
+display:flex;
+justify-content:space-between;
+padding:9px 0;
+border-bottom:1px dotted #333;
+font-size:15px;
+}
+.price{color:#c9a24d}
+footer{
+text-align:center;
+padding:30px 20px;
+font-size:14px;
+color:#aaa;
+border-top:1px solid #333;
+}
+footer a{
+color:#c9a24d;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.jpg" alt="Bellini al Corso">
+<h1>BELLINI AL CORSO</h1>
+<p>caffè dal 2002</p>
+</header>
+
+<nav>
+<button onclick="show('caffe')">Caffè</button>
+<button onclick="show('dolci')">Dolci</button>
+<button onclick="show('salati')">Salati</button>
+<button onclick="show('bibite')">Bibite</button>
+</nav>
+
+<section id="caffe" class="active">
+<h2>CAFFÈ ESPRESSO</h2>
+<ul>
+<li><span>Caffè espresso</span><span class="price">€1,50</span></li>
+<li><span>Cappuccino</span><span class="price">€2,50</span></li>
+<li><span>Latte macchiato</span><span class="price">€2,50</span></li>
+<li><span>Caffè Shakerato</span><span class="price">€2,50</span></li>
+</ul>
+</section>
+
+<section id="dolci">
+<h2>DOLCI</h2>
+<ul>
+<li><span>Cornetti vari gusti</span><span class="price">€1,50</span></li>
+<li><span>Brioche grande</span><span class="price">€2,00</span></li>
+</ul>
+</section>
+
+<section id="salati">
+<h2>SALATI</h2>
+<ul>
+<li><span>Pizzette</span><span class="price">€2,00</span></li>
+<li><span>Tramezzino</span><span class="price">€4,00</span></li>
+</ul>
+</section>
+
+<section id="bibite">
+<h2>BIBITE</h2>
+<ul>
+<li><span>Acqua</span><span class="price">€1,00</span></li>
+<li><span>Coca Cola</span><span class="price">€3,50</span></li>
+</ul>
+</section>
+
+<footer>
+📍 Corso Vittorio Emanuele, 240 – Salerno<br><br>
+📸 <a href="https://www.instagram.com/bellini_al_corso?igsh=MWRzOXZydXR0eXVxdw%3D%3D&utm_source=qr" target="_blank">
+Instagram Bellini al Corso
+</a>
+</footer>
+
+<script>
+function show(id){
+document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>
